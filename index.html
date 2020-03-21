@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" 
+    type="image/png" 
+    href="8.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+ .container{
+width: 90%;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin: auto;
+height: 550px;
+background: rgb(0, 0, 0);
+background: url(ba.png);
+background-size: cover;
+background-repeat:no-repeat ;
+border: 2px solid gold;
+border-radius: 60px 0px 30px 0px;
+box-shadow: -10px -10px 10px 0px rgb(104, 104, 104);
+}   
+.main{
+width: 25%;
+height: 25%;
+border: 5px solid black;
+display: flex;
+margin: auto;
+align-items: center;
+border-radius: 30px 0px ;
+}
+.a{
+    background: url(1.png);
+    background-size: cover;
+}
+.b{
+    background: url(3.png);
+    background-size: cover;
+}
+.c{
+    background: url(2.png);
+    background-size: cover;
+}
+.d{
+    background: url(4.png);
+    background-size: cover;
+}
+.e{
+    background: url(5.png);
+    background-size: cover;
+}
+.f{
+    background: url(6.png);
+    background-size: cover;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.ic{
+    color: gold;
+    font-size: 40px;
+    padding: 10px;
+    
+}
+h3{
+    text-align:right;
+    color:rgb(245, 245, 245);
+  
+    opacity: 0.7;
+    font-size: 60PX;
+
+}
+
+@media screen and (max-width: 760px) {
+.main{
+    display:block;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+.container{
+    display: block;
+    width: 90%;
+    height: 100%;
+}
+
+}
+</style>
+
+<body>
+    <i class="fas fa-headphones ic"></i>
+  
+    <h1 style="color: GOLD;text-align: center;"><i class="fas fa-headphones"></i>BEATS</h1>
+    <div class="container">
+     
+        <video autoplay muted loop id="myVideo">
+            <source src="rain.mp4" type="video/mp4">
+          </video>
+        <div class="a main"><h3>POP</h3></div>
+        <div class="b main"><h3>PARTY</h3></div>
+        <div class="c main"><h3>EDM</h3></div>
+        <div class="d main"><h3>CHILLS</h3></div>
+        <div class="e main"><h3>INSTRU</h3></div>
+        <div class="f main"><h3>LIVE</h3></div>
+        
+    </div>
+    
+    <script src="https://kit.fontawesome.com/8893b709f5.js" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
