@@ -31,7 +31,7 @@ box-shadow: -10px -10px 10px 0px rgb(104, 104, 104);
 .main{
 width: 25%;
 height: 25%;
-border: 5px solid black;
+border: 5px solid rgb(0, 0, 0);
 display: flex;
 margin: auto;
 align-items: center;
@@ -41,27 +41,7 @@ border-radius: 30px 0px ;
     background: url(1.png);
     background-size: cover;
 }
-.b{
-    background: url(3.png);
-    background-size: cover;
-}
-.c{
-    background: url(2.png);
-    background-size: cover;
-}
-.d{
-    background: url(4.png);
-    background-size: cover;
-}
-.e{
-    background: url(5.png);
-    background-size: cover;
-}
-.f{
-    background: url(6.png);
-    background-size: cover;
-}
-    .a:hover{
+.a:hover{
     border: 5px solid gold;
     cursor: pointer;
 }
@@ -85,6 +65,27 @@ border-radius: 30px 0px ;
     border: 5px solid gold;
 }
 
+
+.b{
+    background: url(3.png);
+    background-size: cover;
+}
+.c{
+    background: url(2.png);
+    background-size: cover;
+}
+.d{
+    background: url(4.png);
+    background-size: cover;
+}
+.e{
+    background: url(5.png);
+    background-size: cover;
+}
+.f{
+    background: url(6.png);
+    background-size: cover;
+}
 #myVideo {
   position: fixed;
   right: 0;
@@ -98,16 +99,30 @@ border-radius: 30px 0px ;
     padding: 10px;
     
 }
+.icc{
+    color: gold;
+    font-size: 40px;
+    padding: 10px;
+    
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    padding: 0;
+  
+    
+}
 h3{
-   text-align:right;
+    text-align:right;
     color:rgb(0, 0, 0);
   
     opacity: 0.7;
     font-size: 45PX;
     text-shadow: 3px 3px gold;
-        background-color: ivory ;
-       border-radius: 10px 0px 10px 0px;
-
+    background-color: ivory ;
+    border-radius: 10px 0px 10px 0px;
 
 }
 
@@ -123,29 +138,122 @@ h3{
     width: 90%;
     height: 100%;
 }
+h3{
+    font-size: 50px;
+}
 
 }
+
 </style>
 
 <body>
     <i class="fas fa-headphones ic"></i>
   
     <h1 style="color: GOLD;text-align: center;"><i class="fas fa-headphones"></i>BEATS</h1>
+    
     <div class="container">
      
-        <video autoplay muted loop id="myVideo">
-            <source src="rain.mp4" type="video/mp4">
-          </video>
+        
         <div class="a main"><h3>POP</h3></div>
         <div class="b main"><h3>PARTY</h3></div>
         <div class="c main"><h3>EDM</h3></div>
         <div class="d main"><h3>CHILLS</h3></div>
         <div class="e main"><h3>INSTRU</h3></div>
         <div class="f main"><h3>LIVE</h3></div>
-        
+       
     </div>
+    <i class="fas fa-stop-circle icc main">STOP</i>
+
     
     <script src="https://kit.fontawesome.com/8893b709f5.js" crossorigin="anonymous"></script>
+ <script>
+     var dlength = document.querySelectorAll('.main').length;
+    for( var i = 0 ; i < dlength ; i++)
+var demo = document.querySelectorAll('.main')[i].addEventListener('click',playsong);
+
+
+
+var song1 = new Audio();
+var song2 = new Audio();
+var song3 = new Audio();
+var song4 = new Audio();
+var song5 = new Audio();
+var song6 = new Audio();
+song1.src = "alan.mp3";
+song2.src = "b.mp3";
+song3.src = "c.mp3";
+song4.src = "d.mp3";
+song5.src = "e.mp3";
+song6.src = "f.mp3";
+function playsong()
+{
+    var songid = this.innerHTML;
  
+switch (songid) {
+    case "<h3>POP</h3>":
+song2.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+song6.pause();
+song1.play();
+break;
+        case "<h3>PARTY</h3>":
+        song1.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+song6.pause();
+        song2.play();
+        break;
+        case "<h3>EDM</h3>":
+        song2.pause();
+song1.pause();
+song4.pause();
+song5.pause();
+song6.pause();
+        song3.play();
+        break;
+        case "<h3>CHILLS</h3>":
+        song2.pause();
+song3.pause();
+song1.pause();
+song5.pause();
+song6.pause();
+        song4.play();
+        break;
+        case "<h3>INSTRU</h3>":
+        song2.pause();
+song3.pause();
+song4.pause();
+song1.pause();
+song6.pause();
+        song5.play();
+        break;
+        case "<h3>LIVE</h3>":
+        song2.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+song1.pause();
+        song6.play();
+        break;
+
+
+
+    default:
+    song2.pause();
+song3.pause();
+song4.pause();
+song5.pause();
+song1.pause();
+        song6.pause();   
+        break;
+}
+    
+}
+
+
+ </script>
 </body>
 </html>
